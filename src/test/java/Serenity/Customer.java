@@ -14,7 +14,7 @@ public class Customer {
 
     @Step("Subscriber's main address {string}")
     public void askForChange(String adresse) {
-        customer.adresse=adresse;
+        this.adresse=adresse;
     }
 
 
