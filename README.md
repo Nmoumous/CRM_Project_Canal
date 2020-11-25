@@ -5,9 +5,13 @@ Ce projet a pu but de réaliser un cas de test dans le cadre de l'utilisation d'
 Dans le cas présent, il est étudié le cas suivant :
 
 Fonctionnalité: Modifier l'adresse d'un abonné
+
 Plan du scénario: Modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet
+
 Etant donné un abonné avec une adresse principale <active> en France
+
 Lorsque le conseiller connecté à <canal> modifie l'adresse de l'abonné
+
 Alors l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné Et un mouvement de modification d'adresse est créé 
 
 
@@ -22,7 +26,7 @@ Dans cette feature, quatre variables sont définies.
 
 
 Les définitions des étapes du scénario sont dans le fichier StepDefinitions.java.  
-Pour vérifier que le build se fait bien il suffit dans le terminal d'IntellJ IDEA et se placer dans le dossier hellocucumber du projet. 
+Pour vérifier que le build se fait bien il suffit d'ouvrir le terminal d'IntellJ IDEA et se placer dans le dossier hellocucumber du projet. 
 taper => mvn test 
 Le résultat attendu doit finir par :
 [INFO] Scanning for projects...
