@@ -107,8 +107,8 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
 Serenity BDD aide à écrire plus rapidement des tests d'acceptation et de régression automatisés plus propres et plus faciles à maintenir.
 Serenity utilise les résultats des tests pour produire des rapports illustrés et narratifs qui documentent et décrivent ce que fait l'application.
 
-Pour ce faire les dependances et le plugin nécessaire sont insérées dans le fichier pom.xml. 
+Pour ce faire les dependances et le plugin nécessaire sont intégrés dans le fichier pom.xml. 
 
 Les tests Serenity se font dans le fichier Serenitytest.java où l'on retrouve les tests sur les différentes étapes du scénario. 
 
-A l'heure actuelle, la structure semble fonctionne car la page index.html s'affiche bien. Cependant, aucun tests n'est lancé pour le moment. 
+A l'heure actuelle, la structure semble fonctionner car la page index.html s'affiche bien. Cependant, aucun tests n'est lancé pour le moment. 
