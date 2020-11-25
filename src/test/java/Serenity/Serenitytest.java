@@ -1,5 +1,8 @@
 package Serenity;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
@@ -9,12 +12,12 @@ import org.junit.runner.RunWith;
 public class Serenitytest {
 
     @Steps
-    Customer customer;
+    private Customer customer;
 
     @Test
     public void shouldGiveUsEC(){
         //Given
-        customer.askForChange();
+        customer.askForChange("adresse actuelle");
         //When
         customer.advisorIsActive();
 
@@ -25,3 +28,9 @@ public class Serenitytest {
 
 
 }
+/*@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(
+        features="src/test/resources/hellocucumber/adresse.feature",
+        glue = "net.serenity_bdd.samples")
+public class CashWithdrawals {
+}*/
