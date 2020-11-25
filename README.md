@@ -25,6 +25,73 @@ Les définitions des étapes du scénario sont dans le fichier StepDefinitions.j
 Pour vérifier que le build se fait bien il suffit dans le terminal d'IntellJ IDEA et se placer dans le dossier hellocucumber du projet. 
 taper => mvn test 
 Le résultat attendu doit finir par :
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< hellocucumber:hellocucumber >---------------------
+[INFO] Building hellocucumber 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hellocucumber ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Moumous\IdeaProjects\CRM_Project\hellocucumber\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ hellocucumber ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hellocucumber ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ hellocucumber ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ hellocucumber ---
+[INFO] Surefire report directory: C:\Users\Moumous\IdeaProjects\CRM_Project\hellocucumber\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hellocucumber.RunCucumberTest
+
+Scenario Outline: Modification of the address of a subscriber residing in France with or without effect date # hellocucumber/adresse.feature:11
+  Given Subscriber's main address "ancienne adresse"                                                         # hellocucumber.StepDefinitions.subscriber_s_main_address(
+java.lang.String)
+  When Advisor connected to "active" changes the subscriber's address                                        # hellocucumber.StepDefinitions.advisor_connected_to_chang
+es_the_subscriber_s_address(java.lang.String)
+  Then the modified subscriber's address is recorded on all the subscriber's contracts "inactive"            # hellocucumber.StepDefinitions.the_modified_subscriber_s_
+address_is_recorded_on_all_the_subscriber_s_contracts(java.lang.String)
+  And and an address modification movement is created "active"                                               # hellocucumber.StepDefinitions.and_an_address_modificatio
+n_movement_is_created_active(java.lang.String)
+
+Scenario Outline: Modification of the address of a subscriber residing in France with or without effect date # hellocucumber/adresse.feature:12
+  Given Subscriber's main address "ancienne adresse"                                                         # hellocucumber.StepDefinitions.subscriber_s_main_address(
+java.lang.String)
+  When Advisor connected to "inactive" changes the subscriber's address                                      # hellocucumber.StepDefinitions.advisor_connected_to_chang
+es_the_subscriber_s_address(java.lang.String)
+  Then the modified subscriber's address is recorded on all the subscriber's contracts "inactive"            # hellocucumber.StepDefinitions.the_modified_subscriber_s_
+address_is_recorded_on_all_the_subscriber_s_contracts(java.lang.String)
+  And and an address modification movement is created "inactive"                                             # hellocucumber.StepDefinitions.and_an_address_modificatio
+n_movement_is_created_active(java.lang.String)
+
+Scenario Outline: Modification of the address of a subscriber residing in France with or without effect date # hellocucumber/adresse.feature:13
+  Given Subscriber's main address "adresse 1"                                                                # hellocucumber.StepDefinitions.subscriber_s_main_address(
+java.lang.String)
+  When Advisor connected to "active" changes the subscriber's address                                        # hellocucumber.StepDefinitions.advisor_connected_to_chang
+es_the_subscriber_s_address(java.lang.String)
+  Then the modified subscriber's address is recorded on all the subscriber's contracts "inactive"            # hellocucumber.StepDefinitions.the_modified_subscriber_s_
+address_is_recorded_on_all_the_subscriber_s_contracts(java.lang.String)
+  And and an address modification movement is created "active"                                               # hellocucumber.StepDefinitions.and_an_address_modificatio
+n_movement_is_created_active(java.lang.String)
+
+Scenario Outline: Modification of the address of a subscriber residing in France with or without effect date # hellocucumber/adresse.feature:14
+  Given Subscriber's main address "adresse 1"                                                                # hellocucumber.StepDefinitions.subscriber_s_main_address(
+java.lang.String)
+  When Advisor connected to "inactive" changes the subscriber's address                                      # hellocucumber.StepDefinitions.advisor_connected_to_chang
+es_the_subscriber_s_address(java.lang.String)
+  Then the modified subscriber's address is recorded on all the subscriber's contracts "inactive"            # hellocucumber.StepDefinitions.the_modified_subscriber_s_
+address_is_recorded_on_all_the_subscriber_s_contracts(java.lang.String)
+  And and an address modification movement is created "inactive"                                             # hellocucumber.StepDefinitions.and_an_address_modificatio
+n_movement_is_created_active(java.lang.String)
 
 
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.373 sec
@@ -44,5 +111,4 @@ Pour ce faire les dependances et le plugin nécessaire sont insérées dans le f
 
 Les tests Serenity se font dans le fichier Serenitytest.java où l'on retrouve les tests sur les différentes étapes du scénario. 
 
-
-
+A l'heure actuelle, la structure semble fonctionne car la page index.html s'affiche bien. Cependant, aucun tests n'est lancé pour le moment. 
