@@ -31,6 +31,6 @@ public class Serenitytest {
 /*@RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features="src/test/resources/hellocucumber/adresse.feature",
-        glue = "net.serenity_bdd.samples")
-public class CashWithdrawals {
+        glue = "StepDefinitions")
+public class Serenitytest {
 }*/

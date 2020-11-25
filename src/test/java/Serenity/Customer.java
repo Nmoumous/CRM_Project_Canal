@@ -6,18 +6,15 @@ import org.junit.runner.RunWith;
 
 
 public class Customer {
+
     private String adresse;
-    /*private static Customer withInitialAddress(String adresse) {
-        Customer customer1;
-        customer1.adresse="adresse";
-        return customer1;
-    }*/
-
-
+    private String face;
+    private String EC;
     private Customer customer;
+
     @Step("Subscriber's main address {string}")
     public void askForChange(String adresse) {
-        //customer=Customer.withInitialAddress(adresse);
+        customer.adresse=adresse;
     }
 
 
